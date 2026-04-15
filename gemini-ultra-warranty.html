@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google AI Ultra — условия и гарантия</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: #0d0d0d;
+    color: #e8e8e8;
+    line-height: 1.7;
+    padding: 40px 20px 80px;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #4285f4, #34a853, #fbbc05, #ea4335);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subtitle {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 48px;
+    font-weight: 500;
+  }
+
+  .section {
+    margin-bottom: 40px;
+    padding: 28px 32px;
+    background: #161616;
+    border-radius: 16px;
+    border: 1px solid #222;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 16px 0 0 16px;
+  }
+
+  .section.blue::before { background: #4285f4; }
+  .section.amber::before { background: #fbbc05; }
+  .section.green::before { background: #34a853; }
+  .section.red::before { background: #ea4335; }
+  .section.purple::before { background: #a855f7; }
+
+  .section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #fff;
+  }
+
+  .section p {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 12px;
+  }
+
+  .section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+  }
+
+  .check-list li {
+    font-size: 0.95rem;
+    color: #bbb;
+    padding: 8px 0;
+    padding-left: 32px;
+    position: relative;
+    border-bottom: 1px solid #1e1e1e;
+  }
+
+  .check-list li:last-child {
+    border-bottom: none;
+  }
+
+  .check-list li::before {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 1rem;
+  }
+
+  .check-list li.yes::before { content: '✅'; }
+  .check-list li.no::before { content: '❌'; }
+
+  .example-block {
+    background: #111;
+    border: 1px solid #1e1e1e;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 16px;
+  }
+
+  .example-block .label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 12px;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 24px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: #333;
+    border-radius: 2px;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding: 6px 0;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -21px;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #34a853;
+    border: 2px solid #0d0d0d;
+  }
+
+  .timeline-item.blocked::before {
+    background: #ea4335;
+  }
+
+  .timeline-item .day {
+    font-weight: 700;
+    color: #fff;
+    margin-right: 4px;
+  }
+
+  .timeline-item .action {
+    color: #34a853;
+    font-weight: 600;
+  }
+
+  .timeline-item.blocked .action {
+    color: #ea4335;
+  }
+
+  .highlight {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .divider {
+    height: 1px;
+    background: #222;
+    margin: 48px 0;
+    border: none;
+  }
+
+  .footer-note {
+    text-align: center;
+    color: #555;
+    font-size: 0.85rem;
+    margin-top: 48px;
+  }
+
+  .footer-note span {
+    color: #888;
+    font-weight: 600;
+  }
+
+  @media (max-width: 500px) {
+    h1 { font-size: 1.6rem; }
+    .section { padding: 20px 20px; }
+    body { padding: 24px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Google AI Ultra</h1>
+  <p class="subtitle">Условия и гарантия — Lucas.creative</p>
+
+  <!-- Почему разная цена -->
+  <div class="section blue">
+    <div class="section-title">Почему разная цена?</div>
+    <p>Ultra — самая дорогая подписка Google, поэтому Google чаще проверяет и блокирует такие аккаунты. Из-за этого Ultra менее стабильны, чем Pro.</p>
+    <p>Разница в цене — это стоимость вашей страховки: <span class="highlight">чем дольше гарантия, тем больше замен</span> вы получите в случае блокировки.</p>
+  </div>
+
+  <!-- Без гарантии -->
+  <div class="section amber">
+    <div class="section-title">Что значит «без гарантии»?</div>
+    <p>Вы получаете рабочий аккаунт, проверенный перед выдачей. Но если он заблокируется через час, день или неделю — <span class="highlight">замена и возврат не предусмотрены</span>.</p>
+    <p>Это самый дешёвый вариант именно потому, что все риски на вас. Подходит тем, кто понимает риски и готов к ним.</p>
+  </div>
+
+  <!-- Как работает гарантия -->
+  <div class="section green">
+    <div class="section-title">Как работает гарантия?</div>
+    <ul class="check-list">
+      <li class="yes">Срок гарантии отсчитывается <span class="highlight">с момента выдачи первого аккаунта</span> — не с момента оплаты и не с момента первого входа.</li>
+      <li class="yes">Если в течение гарантийного срока аккаунт заблокируют — делаем <span class="highlight">замену</span>.</li>
+      <li class="yes">Если замены нет в наличии — возврат за неиспользованные дни <span class="highlight">в рамках оставшегося гарантийного срока</span>, либо депозит на счёт магазина.</li>
+      <li class="no">После истечения гарантийного срока замены и возвраты не предусмотрены.</li>
+    </ul>
+  </div>
+
+  <!-- Как работают замены -->
+  <div class="section purple">
+    <div class="section-title">🔁 Как работают замены?</div>
+    <p>Гарантийный срок — <span class="highlight">единый на всю покупку</span>. При замене аккаунта гарантия <span class="highlight">не обнуляется и не продлевается</span> — она продолжает идти с момента выдачи первого аккаунта.</p>
+
+    <div class="example-block">
+      <div class="label">Пример — гарантия 7 дней, выдача 1-го числа</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="day">1-е</span> — аккаунт выдан, гарантия до 7-го включительно
+        </div>
+        <div class="timeline-item">
+          <span class="day">3-е</span> — заблокировали → <span class="action">заменим</span>, гарантия всё ещё до 7-го
+        </div>
+        <div class="timeline-item">
+          <span class="day">5-е</span> — замену заблокировали → <span class="action">заменим снова</span>, гарантия до 7-го
+        </div>
+        <div class="timeline-item blocked">
+          <span class="day">8-е</span> — что угодно случилось → <span class="action">гарантия истекла</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-note">© <span>Lucas.creative</span></p>
+
+</div>
+
+</body>
+</html>
