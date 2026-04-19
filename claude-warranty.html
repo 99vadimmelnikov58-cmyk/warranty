@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude — условия и гарантия</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: #0d0d0d;
+    color: #e8e8e8;
+    line-height: 1.7;
+    padding: 40px 20px 80px;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #D97757, #C15F3C, #8B3A1F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subtitle {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 48px;
+    font-weight: 500;
+  }
+
+  .section {
+    margin-bottom: 32px;
+    padding: 28px 32px;
+    background: #161616;
+    border-radius: 16px;
+    border: 1px solid #222;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 16px 0 0 16px;
+  }
+
+  .section.orange::before { background: #D97757; }
+  .section.amber::before { background: #fbbc05; }
+  .section.green::before { background: #34a853; }
+  .section.red::before { background: #ea4335; }
+  .section.purple::before { background: #a855f7; }
+  .section.blue::before { background: #4285f4; }
+
+  .section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #fff;
+  }
+
+  .section p {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 12px;
+  }
+
+  .section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .variants {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+  }
+
+  .variants li {
+    padding: 14px 0;
+    border-bottom: 1px solid #1e1e1e;
+    font-size: 0.95rem;
+    color: #bbb;
+  }
+
+  .variants li:last-child {
+    border-bottom: none;
+  }
+
+  .variants li .name {
+    color: #fff;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+  }
+
+  .check-list li {
+    font-size: 0.95rem;
+    color: #bbb;
+    padding: 8px 0;
+    padding-left: 32px;
+    position: relative;
+    border-bottom: 1px solid #1e1e1e;
+  }
+
+  .check-list li:last-child {
+    border-bottom: none;
+  }
+
+  .check-list li::before {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 1rem;
+  }
+
+  .check-list li.yes::before { content: '✅'; }
+  .check-list li.no::before { content: '❌'; }
+
+  .example-block {
+    background: #111;
+    border: 1px solid #1e1e1e;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 16px;
+  }
+
+  .example-block .label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 12px;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 24px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: #333;
+    border-radius: 2px;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding: 6px 0;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -21px;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #34a853;
+    border: 2px solid #0d0d0d;
+  }
+
+  .timeline-item.blocked::before {
+    background: #ea4335;
+  }
+
+  .timeline-item .day {
+    font-weight: 700;
+    color: #fff;
+    margin-right: 4px;
+  }
+
+  .timeline-item .action {
+    color: #34a853;
+    font-weight: 600;
+  }
+
+  .timeline-item.blocked .action {
+    color: #ea4335;
+  }
+
+  .highlight {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .warn-box {
+    background: #1a1410;
+    border: 1px solid #3d2a1f;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 12px;
+  }
+
+  .warn-box p {
+    color: #ccc;
+    margin-bottom: 8px;
+  }
+
+  .warn-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-note {
+    text-align: center;
+    color: #555;
+    font-size: 0.85rem;
+    margin-top: 48px;
+  }
+
+  .footer-note span {
+    color: #888;
+    font-weight: 600;
+  }
+
+  @media (max-width: 500px) {
+    h1 { font-size: 1.6rem; }
+    .section { padding: 20px 20px; }
+    body { padding: 24px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Claude</h1>
+  <p class="subtitle">Условия и гарантия — Lucas.creative</p>
+
+  <!-- Чем отличаются варианты -->
+  <div class="section orange">
+    <div class="section-title">Чем отличаются варианты?</div>
+    <p>Anthropic периодически ограничивает аккаунты из России — это вне нашего контроля. Разница в цене отражает <span class="highlight">разный уровень защиты</span> от таких ситуаций.</p>
+    <ul class="variants">
+      <li>
+        <span class="name">🔹 Подарочный код (без гарантии)</span>
+        Самый дешёвый вариант. Код, который вы активируете на своём профиле. Если код не активируется (техническая ошибка) — заменим на рабочий. Но если код активировался успешно, а подписку потом заблокируют — замена и возврат не предусмотрены. Все риски на вас.
+      </li>
+      <li>
+        <span class="name">🔹 Промокод (с гарантией 30 дней)</span>
+        Надёжный вариант с гарантией 30 дней после выдачи. Если подписка слетает в гарантийный срок — замена при наличии, либо возврат за неиспользованный период.
+      </li>
+    </ul>
+  </div>
+
+  <!-- Без гарантии -->
+  <div class="section amber">
+    <div class="section-title">Что значит «без гарантии»?</div>
+    <p>Вы получаете подарочный код, проверенный перед выдачей. Если код не активируется (техническая ошибка) — <span class="highlight">заменим на рабочий</span>.</p>
+    <p>Но если код активировался успешно, а подписку потом заблокируют через час, день или неделю — <span class="highlight">замена и возврат не предусмотрены</span>. Подходит тем, кто понимает риски и готов к ним.</p>
+  </div>
+
+  <!-- Как работает гарантия -->
+  <div class="section green">
+    <div class="section-title">Как работает гарантия 30 дней?</div>
+    <ul class="check-list">
+      <li class="yes">Срок гарантии отсчитывается <span class="highlight">с момента выдачи первого промокода</span> — не с момента оплаты и не с момента активации.</li>
+      <li class="yes">Если промокод не активируется (техническая ошибка) — <span class="highlight">выдаём новый</span>.</li>
+      <li class="yes">Если подписка слетает в течение 30 дней — замена при наличии товара, либо возврат за неиспользованные дни.</li>
+      <li class="yes">При замене гарантийный срок <span class="highlight">не обнуляется и не начинается заново</span> — он продолжает идти с момента выдачи первого промокода.</li>
+      <li class="no">После истечения 30 дней замены и возвраты не предусмотрены.</li>
+    </ul>
+  </div>
+
+  <!-- Как работают замены -->
+  <div class="section purple">
+    <div class="section-title">🔁 Как работают замены?</div>
+    <p>Гарантийный срок — <span class="highlight">единый на всю покупку</span>. При замене промокода гарантия <span class="highlight">не обнуляется и не продлевается</span> — она продолжает идти с момента выдачи первого промокода.</p>
+
+    <div class="example-block">
+      <div class="label">Пример — гарантия 30 дней, выдача 1-го числа</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="day">1-е</span> — промокод выдан, гарантия до 30-го включительно
+        </div>
+        <div class="timeline-item">
+          <span class="day">3-е</span> — промокод не активировался → <span class="action">выдадим новый</span>, гарантия всё ещё до 30-го
+        </div>
+        <div class="timeline-item">
+          <span class="day">18-е</span> — подписку заблокировали → <span class="action">заменим или вернём деньги</span> за оставшиеся дни
+        </div>
+        <div class="timeline-item blocked">
+          <span class="day">31-е</span> — что угодно случилось → <span class="action">гарантия истекла</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Блокировка профиля -->
+  <div class="section blue">
+    <div class="section-title">⚠️ Блокировка профиля</div>
+    <p>Если Anthropic заблокирует сам профиль — <span class="highlight">замена не предоставляется</span>. После активации подписки профиль полностью в ваших руках. Гарантия распространяется <span class="highlight">только на подписку</span>, не на профиль.</p>
+  </div>
+
+  <!-- Российский IP -->
+  <div class="section red">
+    <div class="section-title">⚠️ Важно про российский IP</div>
+    <p>Anthropic блокирует профили при входе из России. <span class="highlight">Не используйте российский IP</span> для входа — это может привести к блокировке, на которую <span class="highlight">гарантия не распространяется</span>.</p>
+    <p>Пользуйтесь платным V*N с выделенным IP:</p>
+    <div class="warn-box" style="margin-top: 8px;">
+      <p style="text-align: center; font-size: 1.05rem; margin: 0;">🇩🇪 Германия &nbsp;/&nbsp; 🇺🇸 США &nbsp;/&nbsp; 🇬🇧 Великобритания</p>
+    </div>
+  </div>
+
+  <p class="footer-note">© <span>Lucas.creative</span></p>
+
+</div>
+
+</body>
+</html>
