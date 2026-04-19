@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude — правила активации</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: #0d0d0d;
+    color: #e8e8e8;
+    line-height: 1.7;
+    padding: 40px 20px 80px;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #D97757, #C15F3C, #8B3A1F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subtitle {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 48px;
+    font-weight: 500;
+  }
+
+  .section {
+    margin-bottom: 32px;
+    padding: 28px 32px;
+    background: #161616;
+    border-radius: 16px;
+    border: 1px solid #222;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 16px 0 0 16px;
+  }
+
+  .section.orange::before { background: #D97757; }
+  .section.amber::before { background: #fbbc05; }
+  .section.green::before { background: #34a853; }
+  .section.red::before { background: #ea4335; }
+  .section.purple::before { background: #a855f7; }
+  .section.blue::before { background: #4285f4; }
+
+  .section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #fff;
+  }
+
+  .section p {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 12px;
+  }
+
+  .section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    counter-reset: step;
+  }
+
+  .steps li {
+    padding: 12px 0;
+    padding-left: 36px;
+    border-bottom: 1px solid #1e1e1e;
+    font-size: 0.95rem;
+    color: #bbb;
+    position: relative;
+  }
+
+  .steps li:last-child {
+    border-bottom: none;
+  }
+
+  .steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #222;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .highlight {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .warn-text {
+    color: #ea4335;
+    font-weight: 600;
+  }
+
+  .warn-box {
+    background: #1a1410;
+    border: 1px solid #3d2a1f;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 16px;
+  }
+
+  .warn-box .label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #D97757;
+    margin-bottom: 8px;
+  }
+
+  .warn-box p {
+    color: #ccc;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+  }
+
+  .warn-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  .divider {
+    height: 1px;
+    background: #333;
+    margin: 48px 0;
+    border: none;
+    position: relative;
+  }
+
+  .divider::after {
+    content: '• • •';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d0d0d;
+    padding: 0 16px;
+    color: #444;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+  }
+
+  .footer-note {
+    text-align: center;
+    color: #555;
+    font-size: 0.85rem;
+    margin-top: 48px;
+  }
+
+  .footer-note span {
+    color: #888;
+    font-weight: 600;
+  }
+
+  @media (max-width: 500px) {
+    h1 { font-size: 1.6rem; }
+    .section { padding: 20px 20px; }
+    body { padding: 24px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Claude</h1>
+  <p class="subtitle">Правила активации подписки — Lucas.creative</p>
+
+  <p style="color: #bbb; font-size: 0.95rem; margin-bottom: 32px;">Активация на вашу почту. Нужно быть зарегистрированным на сайте <span class="highlight">claude.ai</span></p>
+
+  <!-- ==================== ПОДАРОЧНЫЙ КОД ==================== -->
+
+  <div class="section orange">
+    <div class="section-title">🎁 Подарочный код — правила активации</div>
+    <ol class="steps">
+      <li>Активация подарочной ссылки осуществляется <span class="highlight">исключительно с ПК</span>.</li>
+      <li>Если ранее у вас в профиле производилось пополнение по ID организации — ссылка для активации подарка <span class="warn-text">будет недействительной</span>.</li>
+      <li>Ваш профиль <span class="highlight">НЕ должен быть связан</span> с App Store или Google Play.</li>
+      <li>Если вы когда-либо оформляли подписку Claude через App Store или Google Play — подарочный код <span class="warn-text">не активируется</span>, даже если подписка давно закончилась. В этом случае создайте новый профиль Claude через браузер.</li>
+      <li>Если при нажатии кнопки появляется ошибка — <span class="warn-text">не обновляйте страницу</span>. Смените точку V*N и повторно нажмите кнопку <span class="highlight">Redeem</span>.</li>
+      <li>Не должно быть активных подписок. Перед активацией должен отображаться <span class="highlight">Free plan</span>. Если есть подписка — отмените её в разделе «Billing».</li>
+    </ol>
+
+    <div class="warn-box">
+      <div class="label">⚠️ Долг в профиле Anthropic</div>
+      <p>Если на вашем профиле есть задолженность перед Anthropic — подарочный код активируется, но подписка <span class="highlight">не добавится</span>. В этом случае новый код <span class="highlight">не выдаётся</span>, так как код был использован корректно.</p>
+      <p><span class="highlight">Что делать:</span> перед активацией кода проверьте раздел <span class="highlight">Billing</span> в настройках профиля и погасите долг, если он есть. Только после этого применяйте код — иначе подписка не добавится, а код сгорит.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ==================== ПРОМОКОД ==================== -->
+
+  <div class="section green">
+    <div class="section-title">🔑 Промокод — правила активации</div>
+    <p>Перед оформлением убедитесь, что ваш профиль подходит:</p>
+
+    <div class="warn-box" style="margin-bottom: 20px;">
+      <div class="label">‼️ Проверьте перед оформлением</div>
+      <p>1. <span class="highlight">НЕТ</span> просроченных инвойсов — отображается как «overdue». Нажмите «Cancel» в разделе «Billing» для отмены задолженностей.</p>
+      <p>2. <span class="highlight">НЕТ</span> активной подписки — обязателен <span class="highlight">Free plan</span>.</p>
+    </div>
+
+    <ol class="steps">
+      <li>Откройте браузер → войдите в <span class="highlight">claude.ai</span></li>
+      <li>Используйте <span class="highlight">Cookie-Editor</span> для получения sessionKey.</li>
+      <li>Скопируйте всё значение (<span class="highlight">Ctrl+A, Ctrl+C</span>) и отправьте нам.</li>
+    </ol>
+  </div>
+
+  <p class="footer-note">© <span>Lucas.creative</span></p>
+
+</div>
+
+</body>
+</html>
